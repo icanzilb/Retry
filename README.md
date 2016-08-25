@@ -68,6 +68,8 @@ The syntax for `retryAsync` is exactly the same as for `retry`. The difference i
 
 ## Installation
 
+__NB__: Before official Cocoapod release for swift 3.0, you can't use Retry via pods
+
 Retry is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
