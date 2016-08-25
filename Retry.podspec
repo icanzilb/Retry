@@ -9,34 +9,21 @@
 Pod::Spec.new do |s|
   s.name             = 'Retry'
   s.version          = '0.6.0'
-  s.summary          = 'A short description of Retry.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'Haven\'t you wished for `try` to sometimes try a little harder? Meet `retry`'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+retry and retryAsync keep running blocks of code that might throw until either 
+a maximum count of retries is reached or some custom developer defined strategy
+instructs them to stop retrying.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/Retry'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/icanzilb/Retry'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Marin Todorov' => 'marin@underplot.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/Retry.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Marin Todorov' => 'touch-code-magazine@underplot.com' }
+  s.source           = { :git => 'https://github.com/icanzilb/Retry.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/icanzilb'
 
-  s.ios.deployment_target = '8.0'
-
+  s.ios.deployment_target = '9.3'
   s.source_files = 'Retry/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'Retry' => ['Retry/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
