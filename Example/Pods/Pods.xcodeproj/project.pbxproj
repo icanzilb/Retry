@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0035B26C7D21B9128873FC37D6BCF900 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		071650A2FAB19221D3EDC2A3D36709F5 /* Pods-RetryExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9A65022DD8077806A787F994E626 /* Pods-RetryExample-dummy.m */; };
+		24B11EB59D6AD5CE7734D218868DA32B /* Pods-Retry_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43CDA52BC7AACB940F232A59DB6BECE4 /* Pods-Retry_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4EBCCB7F3F31A176E73688589BE9D058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		73211533FD402317258B6A9386343184 /* Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2FC4EECD4E7A331E3CA0B4EB56132A /* Retry.swift */; };
+		860C1EAE37190002DEBF9C8E73FF23F1 /* Pods-Retry_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD912B8CC3D55719FFCE01918427EF6F /* Pods-Retry_Tests-dummy.m */; };
+		8B7449C3F328A4073F26440BE765E143 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		96707326C075AF0ABE4E998F439AADE2 /* Retry-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 728960A1B2DFA8B74DBD5108BB50FCF0 /* Retry-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D95997DB439A47FE861006DE07FA6BCD /* Retry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 994173B507AE0F89C3CFAAF9C918D545 /* Retry-dummy.m */; };
+		ED32B1286DFBAA0F3F721E4272890B9E /* Pods-RetryExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F4AB303FEF6C7317CE7430230FEA4E2 /* Pods-RetryExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22608C582922C88780303CA2F6A57D44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 295FCC78E911EBAE2BF9EBB6D463EDC7;
+			remoteInfo = Retry;
+		};
+		4D47596DC32F48B3D841849EDBCD9E86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 295FCC78E911EBAE2BF9EBB6D463EDC7;
+			remoteInfo = Retry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		010477CDE7F24BFC0796DC4773B09542 /* Pods-Retry_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Retry_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		06AB5DA4539858A60DEA4A11AB97717D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D988DA27BD87225EC71786EF5C2BE20 /* Pods-RetryExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RetryExample.modulemap"; sourceTree = "<group>"; };
+		0F4AB303FEF6C7317CE7430230FEA4E2 /* Pods-RetryExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RetryExample-umbrella.h"; sourceTree = "<group>"; };
+		10F0952359CDC71875B3FC1554921852 /* Pods-Retry_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Retry_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		172CEFBC68EB10303349D1043FAF7DC5 /* Retry.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Retry.modulemap; sourceTree = "<group>"; };
+		1738F28FCFC07A41B1CD62884D694571 /* Pods-RetryExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RetryExample.release.xcconfig"; sourceTree = "<group>"; };
+		2A92CD3530025E70B633E32AD08E4E2E /* Pods-Retry_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Retry_Tests.modulemap"; sourceTree = "<group>"; };
+		2BE93B87ECB368422EF925E65D816A3B /* Pods-Retry_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Retry_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2C2C9A65022DD8077806A787F994E626 /* Pods-RetryExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RetryExample-dummy.m"; sourceTree = "<group>"; };
+		43CDA52BC7AACB940F232A59DB6BECE4 /* Pods-Retry_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Retry_Tests-umbrella.h"; sourceTree = "<group>"; };
+		49C9AB93E988B510E27C2066D852F067 /* Pods-RetryExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RetryExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		4C3BB84CD1D1DBF8D609BBEAB5C5B2E3 /* Pods-Retry_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Retry_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		69F973E18A3D1B01C0D2AC32314B2E84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		728960A1B2DFA8B74DBD5108BB50FCF0 /* Retry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Retry-umbrella.h"; sourceTree = "<group>"; };
+		7D4B0DB79571A4D537EAF74967F94FE5 /* Retry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Retry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86420B999F1AC0E5B485E1D3F0DF5769 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		994173B507AE0F89C3CFAAF9C918D545 /* Retry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Retry-dummy.m"; sourceTree = "<group>"; };
+		A0AC445024BDC506B55585D0893FA974 /* Pods-RetryExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RetryExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A7B3AF1192622E785C46D07062251753 /* Pods-Retry_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Retry_Tests-resources.sh"; sourceTree = "<group>"; };
+		A8BEC7F464787905FB8593E36D24235B /* Pods_RetryExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetryExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E0034A87E00A01368DB4E90EB3F062 /* Pods_Retry_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Retry_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3BFD98B19D5E719521507990CCD3B7D /* Pods-RetryExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RetryExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B680D19F70118ECF26542B283CBCDC50 /* Pods-RetryExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RetryExample-frameworks.sh"; sourceTree = "<group>"; };
+		B9CFC5BEDDEB5C88EE54B8F9F2A6D037 /* Pods-Retry_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Retry_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA25AD7945B403644A36E4C529555575 /* Retry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Retry-prefix.pch"; sourceTree = "<group>"; };
+		BC2FC4EECD4E7A331E3CA0B4EB56132A /* Retry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Retry.swift; sourceTree = "<group>"; };
+		BF0AF0CFF39D36FC7CCD259A470F959B /* Pods-RetryExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RetryExample-resources.sh"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		ED48A719E688C13FFE34DE01E5904AE9 /* Retry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Retry.xcconfig; sourceTree = "<group>"; };
+		FD912B8CC3D55719FFCE01918427EF6F /* Pods-Retry_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Retry_Tests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A96C7C3EE70D9AC8A87B322D94B2151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBCCB7F3F31A176E73688589BE9D058 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0A557A546775CFB1CC4509EFF225006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B7449C3F328A4073F26440BE765E143 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C01717756B3BF2387302D9A82F7F471F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0035B26C7D21B9128873FC37D6BCF900 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3735379A97CBD465CD383C09D5B667CD /* Retry */ = {
+			isa = PBXGroup;
+			children = (
+				520392E7B3E1A301C4EA6E917E19E17D /* Retry */,
+				AE6BCD0A811742DD2B48E171454F59CC /* Support Files */,
+			);
+			name = Retry;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4BE20BD6D288B40D3365BA685424A4BE /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3735379A97CBD465CD383C09D5B667CD /* Retry */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		520392E7B3E1A301C4EA6E917E19E17D /* Retry */ = {
+			isa = PBXGroup;
+			children = (
+				B33C9D5A80B148BC07C07AF1B0EC7A20 /* Classes */,
+			);
+			path = Retry;
+			sourceTree = "<group>";
+		};
+		568C19A386C7568EDAEC7992DD86EC05 /* Pods-RetryExample */ = {
+			isa = PBXGroup;
+			children = (
+				86420B999F1AC0E5B485E1D3F0DF5769 /* Info.plist */,
+				0D988DA27BD87225EC71786EF5C2BE20 /* Pods-RetryExample.modulemap */,
+				A0AC445024BDC506B55585D0893FA974 /* Pods-RetryExample-acknowledgements.markdown */,
+				49C9AB93E988B510E27C2066D852F067 /* Pods-RetryExample-acknowledgements.plist */,
+				2C2C9A65022DD8077806A787F994E626 /* Pods-RetryExample-dummy.m */,
+				B680D19F70118ECF26542B283CBCDC50 /* Pods-RetryExample-frameworks.sh */,
+				BF0AF0CFF39D36FC7CCD259A470F959B /* Pods-RetryExample-resources.sh */,
+				0F4AB303FEF6C7317CE7430230FEA4E2 /* Pods-RetryExample-umbrella.h */,
+				B3BFD98B19D5E719521507990CCD3B7D /* Pods-RetryExample.debug.xcconfig */,
+				1738F28FCFC07A41B1CD62884D694571 /* Pods-RetryExample.release.xcconfig */,
+			);
+			name = "Pods-RetryExample";
+			path = "Target Support Files/Pods-RetryExample";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				4BE20BD6D288B40D3365BA685424A4BE /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B949F6E37CE0AA8208425C71B3299345 /* Products */,
+				81B1A83D198C748B628E114171687274 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81B1A83D198C748B628E114171687274 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B22633AAC9224370081DD9C12F156896 /* Pods-Retry_Tests */,
+				568C19A386C7568EDAEC7992DD86EC05 /* Pods-RetryExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AE6BCD0A811742DD2B48E171454F59CC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				69F973E18A3D1B01C0D2AC32314B2E84 /* Info.plist */,
+				172CEFBC68EB10303349D1043FAF7DC5 /* Retry.modulemap */,
+				ED48A719E688C13FFE34DE01E5904AE9 /* Retry.xcconfig */,
+				994173B507AE0F89C3CFAAF9C918D545 /* Retry-dummy.m */,
+				BA25AD7945B403644A36E4C529555575 /* Retry-prefix.pch */,
+				728960A1B2DFA8B74DBD5108BB50FCF0 /* Retry-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Retry";
+			sourceTree = "<group>";
+		};
+		B22633AAC9224370081DD9C12F156896 /* Pods-Retry_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				06AB5DA4539858A60DEA4A11AB97717D /* Info.plist */,
+				2A92CD3530025E70B633E32AD08E4E2E /* Pods-Retry_Tests.modulemap */,
+				B9CFC5BEDDEB5C88EE54B8F9F2A6D037 /* Pods-Retry_Tests-acknowledgements.markdown */,
+				2BE93B87ECB368422EF925E65D816A3B /* Pods-Retry_Tests-acknowledgements.plist */,
+				FD912B8CC3D55719FFCE01918427EF6F /* Pods-Retry_Tests-dummy.m */,
+				010477CDE7F24BFC0796DC4773B09542 /* Pods-Retry_Tests-frameworks.sh */,
+				A7B3AF1192622E785C46D07062251753 /* Pods-Retry_Tests-resources.sh */,
+				43CDA52BC7AACB940F232A59DB6BECE4 /* Pods-Retry_Tests-umbrella.h */,
+				10F0952359CDC71875B3FC1554921852 /* Pods-Retry_Tests.debug.xcconfig */,
+				4C3BB84CD1D1DBF8D609BBEAB5C5B2E3 /* Pods-Retry_Tests.release.xcconfig */,
+			);
+			name = "Pods-Retry_Tests";
+			path = "Target Support Files/Pods-Retry_Tests";
+			sourceTree = "<group>";
+		};
+		B33C9D5A80B148BC07C07AF1B0EC7A20 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BC2FC4EECD4E7A331E3CA0B4EB56132A /* Retry.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B949F6E37CE0AA8208425C71B3299345 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8E0034A87E00A01368DB4E90EB3F062 /* Pods_Retry_Tests.framework */,
+				A8BEC7F464787905FB8593E36D24235B /* Pods_RetryExample.framework */,
+				7D4B0DB79571A4D537EAF74967F94FE5 /* Retry.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		47121B34F9DBAE183433C4821B7F79F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B11EB59D6AD5CE7734D218868DA32B /* Pods-Retry_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F9A2CD08995C3F38DCB7CF29D4A24CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96707326C075AF0ABE4E998F439AADE2 /* Retry-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CEEA2B59A52DD16835C62B22C99C96 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED32B1286DFBAA0F3F721E4272890B9E /* Pods-RetryExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		295FCC78E911EBAE2BF9EBB6D463EDC7 /* Retry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6100269B074C1BD51194B5CDA5822A4E /* Build configuration list for PBXNativeTarget "Retry" */;
+			buildPhases = (
+				50CFEC92498C383758A8E731BCEF2CA9 /* Sources */,
+				B0A557A546775CFB1CC4509EFF225006 /* Frameworks */,
+				5F9A2CD08995C3F38DCB7CF29D4A24CF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Retry;
+			productName = Retry;
+			productReference = 7D4B0DB79571A4D537EAF74967F94FE5 /* Retry.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DF68BF2FB9E71AE49F905A7A35656438 /* Pods-Retry_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7474FE933CFDC0026426ECA0251200DE /* Build configuration list for PBXNativeTarget "Pods-Retry_Tests" */;
+			buildPhases = (
+				AB1B1BA3AF37B2737796F3D310B3B437 /* Sources */,
+				8A96C7C3EE70D9AC8A87B322D94B2151 /* Frameworks */,
+				47121B34F9DBAE183433C4821B7F79F7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7736F4F9E69495CF7F2D5A7C403DDDF9 /* PBXTargetDependency */,
+			);
+			name = "Pods-Retry_Tests";
+			productName = "Pods-Retry_Tests";
+			productReference = A8E0034A87E00A01368DB4E90EB3F062 /* Pods_Retry_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EECEB1B4663B263933D89047084B3313 /* Pods-RetryExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 952947A9DA2930FB520757B86176ABFF /* Build configuration list for PBXNativeTarget "Pods-RetryExample" */;
+			buildPhases = (
+				A154F8DD08DD509274E7087F1DF0627A /* Sources */,
+				C01717756B3BF2387302D9A82F7F471F /* Frameworks */,
+				96CEEA2B59A52DD16835C62B22C99C96 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F36F7C236BC1E734AE18DC2B34FF089 /* PBXTargetDependency */,
+			);
+			name = "Pods-RetryExample";
+			productName = "Pods-RetryExample";
+			productReference = A8BEC7F464787905FB8593E36D24235B /* Pods_RetryExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					295FCC78E911EBAE2BF9EBB6D463EDC7 = {
+						LastSwiftMigration = 0800;
+					};
+					EECEB1B4663B263933D89047084B3313 = {
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B949F6E37CE0AA8208425C71B3299345 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF68BF2FB9E71AE49F905A7A35656438 /* Pods-Retry_Tests */,
+				EECEB1B4663B263933D89047084B3313 /* Pods-RetryExample */,
+				295FCC78E911EBAE2BF9EBB6D463EDC7 /* Retry */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50CFEC92498C383758A8E731BCEF2CA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D95997DB439A47FE861006DE07FA6BCD /* Retry-dummy.m in Sources */,
+				73211533FD402317258B6A9386343184 /* Retry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A154F8DD08DD509274E7087F1DF0627A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071650A2FAB19221D3EDC2A3D36709F5 /* Pods-RetryExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB1B1BA3AF37B2737796F3D310B3B437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860C1EAE37190002DEBF9C8E73FF23F1 /* Pods-Retry_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F36F7C236BC1E734AE18DC2B34FF089 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Retry;
+			target = 295FCC78E911EBAE2BF9EBB6D463EDC7 /* Retry */;
+			targetProxy = 4D47596DC32F48B3D841849EDBCD9E86 /* PBXContainerItemProxy */;
+		};
+		7736F4F9E69495CF7F2D5A7C403DDDF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Retry;
+			target = 295FCC78E911EBAE2BF9EBB6D463EDC7 /* Retry */;
+			targetProxy = 22608C582922C88780303CA2F6A57D44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		42287DDF97330524BA3EF220F0276DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		533E3685D770B13A080397790A3EB985 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10F0952359CDC71875B3FC1554921852 /* Pods-Retry_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Retry_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Retry_Tests/Pods-Retry_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Retry_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F021B71DEB02072AE0F03173A1A7F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED48A719E688C13FFE34DE01E5904AE9 /* Retry.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Retry/Retry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Retry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Retry/Retry.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Retry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6BF85E29BCCF0D8DEE06C0F7DDEE8F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C3BB84CD1D1DBF8D609BBEAB5C5B2E3 /* Pods-Retry_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Retry_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Retry_Tests/Pods-Retry_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Retry_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		719F00F722AC8F449D88D85E94AC0AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1738F28FCFC07A41B1CD62884D694571 /* Pods-RetryExample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RetryExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RetryExample/Pods-RetryExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RetryExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		800445F9AEEACF2071D15C64E849A46D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED48A719E688C13FFE34DE01E5904AE9 /* Retry.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Retry/Retry-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Retry/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Retry/Retry.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Retry;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		98D303B72EB210394E04BBFCF5D66964 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3BFD98B19D5E719521507990CCD3B7D /* Pods-RetryExample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RetryExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RetryExample/Pods-RetryExample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RetryExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AE9439C22469D35336242DD983DB5C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9439C22469D35336242DD983DB5C5F /* Debug */,
+				42287DDF97330524BA3EF220F0276DA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6100269B074C1BD51194B5CDA5822A4E /* Build configuration list for PBXNativeTarget "Retry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F021B71DEB02072AE0F03173A1A7F14 /* Debug */,
+				800445F9AEEACF2071D15C64E849A46D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7474FE933CFDC0026426ECA0251200DE /* Build configuration list for PBXNativeTarget "Pods-Retry_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				533E3685D770B13A080397790A3EB985 /* Debug */,
+				6BF85E29BCCF0D8DEE06C0F7DDEE8F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		952947A9DA2930FB520757B86176ABFF /* Build configuration list for PBXNativeTarget "Pods-RetryExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98D303B72EB210394E04BBFCF5D66964 /* Debug */,
+				719F00F722AC8F449D88D85E94AC0AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

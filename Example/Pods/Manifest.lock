@@ -1,0 +1,16 @@
+PODS:
+  - Retry (0.6.0)
+
+DEPENDENCIES:
+  - Retry (from `../`)
+
+EXTERNAL SOURCES:
+  Retry:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Retry: 749672009f2d0634205e43a1b4d600fafd4d5c18
+
+PODFILE CHECKSUM: 38d85dd9d84a8ecca8c9a0a088399a9b539cd363
+
+COCOAPODS: 1.0.1

@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'Retry_Tests' do
+    pod 'Retry', :path => '../'
+end
+
+target 'RetryExample' do
+  pod 'Retry', :path => '../'
+end
