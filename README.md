@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/Retry.svg?style=flat)](http://cocoapods.org/pods/Retry)
 [![Platform](https://img.shields.io/cocoapods/p/Retry.svg?style=flat)](http://cocoapods.org/pods/Retry)
 
+NB: Currently a very beta version.
+
 ## Example
 
 Haven't you wished for `try` to sometimes try a little harder? Meet `retry`
