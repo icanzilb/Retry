@@ -1,22 +1,23 @@
 {
   "name": "Retry",
   "version": "0.6.0",
-  "summary": "A short description of Retry.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/Retry",
+  "summary": "Haven't you wished for `try` to sometimes try a little harder? Meet `retry`",
+  "description": "retry and retryAsync keep running blocks of code that might throw until either \na maximum count of retries is reached or some custom developer defined strategy\ninstructs them to stop retrying.",
+  "homepage": "https://github.com/icanzilb/Retry",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Marin Todorov": "marin@underplot.com"
+    "Marin Todorov": "touch-code-magazine@underplot.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/Retry.git",
+    "git": "https://github.com/icanzilb/Retry.git",
     "tag": "0.6.0"
   },
+  "social_media_url": "https://twitter.com/icanzilb",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.3"
   },
   "source_files": "Retry/Classes/**/*"
 }
