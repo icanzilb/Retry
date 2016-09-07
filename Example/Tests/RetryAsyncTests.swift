@@ -21,11 +21,10 @@ class RetryAsyncTests: XCTestCase {
         .finalDefer {
             e1.fulfill()
         }
-        output += "-end"
 
         waitForExpectations(timeout: 1.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtrytry", "Didn't retry default(3) times asynchroniously")
+            XCTAssertEqual(output, "trytrytry", "Didn't retry default(3) times asynchroniously")
         }
     }
 
@@ -40,11 +39,11 @@ class RetryAsyncTests: XCTestCase {
         .finalDefer {
             e1.fulfill()
         }
-        output += "-end"
+
 
         waitForExpectations(timeout: 1.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtrytrytrytry", "Didn't retry 5 times asynchroniously")
+            XCTAssertEqual(output, "trytrytrytrytry", "Didn't retry 5 times asynchroniously")
         }
     }
 
@@ -62,11 +61,10 @@ class RetryAsyncTests: XCTestCase {
         }.finalDefer {
             e1.fulfill()
         }
-        output += "-end"
 
         waitForExpectations(timeout: 1.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtrytrytrytry-catch", "Didn't retry 5 times asynchroniously + catch")
+            XCTAssertEqual(output, "trytrytrytrytry-catch", "Didn't retry 5 times asynchroniously + catch")
         }
     }
 
@@ -83,11 +81,10 @@ class RetryAsyncTests: XCTestCase {
         .finalDefer {
             e1.fulfill()
         }
-        output += "-end"
 
         waitForExpectations(timeout: 1.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtrytrytrytry-testError", "Didn't retry 5 times asynchroniously + catch")
+            XCTAssertEqual(output, "trytrytrytrytry-testError", "Didn't retry 5 times asynchroniously + catch")
         }
     }
 
@@ -111,11 +108,10 @@ class RetryAsyncTests: XCTestCase {
         .finalDefer {
             e1.fulfill()
         }
-        output += "-end"
 
         waitForExpectations(timeout: 1.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtrytrytrytry", "Didn't retry 2 times asynchroniously")
+            XCTAssertEqual(output, "trytrytrytrytry", "Didn't retry 2 times asynchroniously")
         }
     }
 
@@ -137,11 +133,10 @@ class RetryAsyncTests: XCTestCase {
             e1.fulfill()
         }
 
-        output += "-end"
 
         waitForExpectations(timeout: 10.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtrytrytrytry", "Didn't retry 5 times asynchroniously")
+            XCTAssertEqual(output, "trytrytrytrytry", "Didn't retry 5 times asynchroniously")
         }
     }
 
@@ -163,11 +158,10 @@ class RetryAsyncTests: XCTestCase {
             e1.fulfill()
         }
 
-        output += "-end"
 
         waitForExpectations(timeout: 10.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtrytry", "Didn't retry 3 times asynchroniously")
+            XCTAssertEqual(output, "trytrytry", "Didn't retry 3 times asynchroniously")
         }
     }
 
@@ -195,11 +189,10 @@ class RetryAsyncTests: XCTestCase {
             e1.fulfill()
         }
 
-        output += "-end"
 
         waitForExpectations(timeout: 5.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtrytry", "Didn't retry 3 times asynchroniously")
+            XCTAssertEqual(output, "trytrytry", "Didn't retry 3 times asynchroniously")
         }
     }
 
@@ -218,11 +211,10 @@ class RetryAsyncTests: XCTestCase {
             output += "-defer"
             e1.fulfill()
         }
-        output += "-end"
 
         waitForExpectations(timeout: 1.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-defer-end", "Didn't succeed")
+            XCTAssertEqual(output, "try-defer", "Didn't succeed")
         }
     }
 
@@ -244,10 +236,9 @@ class RetryAsyncTests: XCTestCase {
             e1.fulfill()
         }
 
-        output += "-end"
         waitForExpectations(timeout: 10.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtry", "Didn't succeed at second try")
+            XCTAssertEqual(output, "trytry", "Didn't succeed at second try")
         }
     }
 
@@ -270,11 +261,33 @@ class RetryAsyncTests: XCTestCase {
             e1.fulfill()
         }
 
-        output += "-end"
 
         waitForExpectations(timeout: 5.0) {error in
             XCTAssertTrue(error == nil)
-            XCTAssertEqual(output, "try-endtry", "Didn't succeed at second try")
+            XCTAssertEqual(output, "trytry", "Didn't succeed at second try")
+        }
+    }
+    
+    func testAsyncFromBackgroundQueue() {
+        let e1 = expectation(description: "final Defer")
+        
+        var output = ""
+        
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
+            retryAsync (max: 3, retryStrategy: .immediate) {
+                output.append("try")
+                throw TestError.testError
+                }.finalCatch {_ in
+                    output.append("-catch")
+                }.finalDefer {
+                    e1.fulfill()
+                }
+    
+        }
+        
+        waitForExpectations(timeout: 2.0) {error in
+            XCTAssertTrue(error == nil)
+            XCTAssertEqual(output, "trytrytry-catch", "Didn't succeed at the third try")
         }
     }
     
