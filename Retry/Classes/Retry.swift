@@ -5,18 +5,20 @@
 //  This source code is covered by the MIT license. Consult the LICENSE file.
 //
 
-public enum RetryStrategy {
-    case immediate
-    case delay(seconds: Double)
-    case custom(closure: (_ currentIteration: Int, _ lastDelay: TimeInterval?)->TimeInterval?)
-}
-
 open class Retry {
+
+    public enum Strategy {
+        case immediate
+        case delay(seconds: Double)
+        case custom(closure: (_ currentIteration: Int, _ lastDelay: TimeInterval?)-> TimeInterval?)
+    }
 
     private let closure: () throws -> Void
     private let maxCount: Int
-    private let strategy: RetryStrategy
-    private let async: Bool
+    private let strategy: Strategy
+
+    private var done: Bool = false
+    private let operatingQueue: DispatchQueue?
 
     private var errorHandler: ((Error) -> Void)?
     private var currentRepeat = 0
@@ -24,8 +26,8 @@ open class Retry {
     private var lastDelay: TimeInterval? = nil
     private var deferHandler: (() -> Void)?
 
-    init(async: Bool, closure: @escaping () throws -> Void, max: Int, strategy: RetryStrategy) {
-        self.async = async
+    init(operatingQueue: DispatchQueue? = nil, closure: @escaping () throws -> Void, max: Int, strategy: Strategy) {
+        self.operatingQueue = operatingQueue
         self.closure = closure
         self.maxCount = max
         self.strategy = strategy
@@ -34,38 +36,50 @@ open class Retry {
     deinit {
         print("deinit retry")
     }
+    
+    private func threadSafe(handler: @escaping ()-> Void) {
+        if let queue = operatingQueue {
+            queue.async(execute: handler)
+        } else {
+            handler()
+        }
+    }
 
     @discardableResult
-    open func finalCatch(_ handler: @escaping ((Error) -> Void)) -> Self {
-        if async {
-            errorHandler = handler
-        } else if let lastError = lastError {
-            handler(lastError)
+    public func finalCatch(_ handler: @escaping ((Error)-> Void)) -> Self {
+        threadSafe {
+            if !self.done {
+                self.errorHandler = handler
+            } else if let lastError = self.lastError {
+                handler(lastError)
+            }
         }
         return self
     }
 
     @discardableResult
-    open func finalDefer(_ handler: @escaping (() -> Void)) -> Self {
-        if async && lastError != nil {
-            deferHandler = handler
-        } else {
-            handler()
+    public func finalDefer(_ handler: @escaping (()-> Void)) -> Self {
+        threadSafe {
+            if !self.done {
+                self.deferHandler = handler
+            } else {
+                handler()
+            }
         }
         return self
     }
 
     private var delayDuration: TimeInterval? {
         switch strategy {
-        case .immediate: return 0
-        case .delay(let delay): return delay
-        case .custom(let closure):
-            if let delay = closure(currentRepeat, lastDelay) {
-                lastDelay = delay
-                return delay
+            case .immediate: return 0
+            case .delay(let delay): return delay
+            case .custom(let closure):
+                if let delay = closure(currentRepeat, lastDelay) {
+                    lastDelay = delay
+                    return delay
+                }
+                return nil
             }
-            return nil
-        }
     }
 
     private func retry() {
@@ -75,39 +89,41 @@ open class Retry {
 
     private func finalize(error: Error? = nil) {
         if let e = error {
+            lastError = e
             self.errorHandler?(e)
         }
         self.deferHandler?()
+        self.done = true
     }
 
     @discardableResult
     fileprivate func running() -> Self {
-        lastError = nil
-
+        var error: Error? = nil
+        
         do {
             try closure()
         }
         catch let e {
-            lastError = e
+            error = e
         }
-
-        guard let e = lastError else {
+        
+        guard let e = error else {
             finalize()
             return self
         }
-
+        
         guard self.currentRepeat+1 < self.maxCount else {
             finalize(error: e)
             return self
         }
-
+        
         guard let delay = delayDuration else {
             finalize(error: e)
             return self
         }
-
-        if async {
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: retry)
+        
+        if let queue = operatingQueue {
+            queue.asyncAfter(deadline: .now() + delay, execute: retry)
         } else {
             Thread.sleep(forTimeInterval: delay)
             retry()
@@ -118,11 +134,12 @@ open class Retry {
 }
 
 @discardableResult
-public func retry(max: Int = 3, retryStrategy: RetryStrategy = .immediate, _ closure: @escaping () throws -> Void) -> Retry {
-    return Retry(async: false, closure: closure, max: max, strategy: retryStrategy).running()
+public func retry( max: Int = 3, retryStrategy: Retry.Strategy = .immediate, _ closure: @escaping () throws -> Void) -> Retry {
+    return Retry(closure: closure, max: max, strategy: retryStrategy).running()
 }
 
 @discardableResult
-public func retryAsync(max: Int = 3, retryStrategy: RetryStrategy = .immediate, _ closure: @escaping () throws -> Void) -> Retry {
-    return Retry(async: true, closure: closure, max: max, strategy: retryStrategy).running()
+public func retryAsync( max: Int = 3, retryStrategy: Retry.Strategy = .immediate, _ closure: @escaping () throws -> Void) -> Retry {
+    let customQueue: DispatchQueue? = Thread.isMainThread ? nil : DispatchQueue(label: "RetryQueue")
+    return Retry(operatingQueue: customQueue, closure: closure, max: max, strategy: retryStrategy).running()
 }
