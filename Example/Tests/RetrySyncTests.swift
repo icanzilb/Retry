@@ -10,6 +10,15 @@ class RetrySyncTests: XCTestCase {
 
     //MARK: - sync retries
 
+    func testSyncNoThrow() {
+        var output = ""
+        retry {
+            output += "try"
+        }
+        output += "-end"
+        XCTAssertEqual(output, "try-end", "Didn't succed at first try")
+    }
+
     func testSyncDefaults() {
         var output = ""
         retry {
@@ -37,8 +46,8 @@ class RetrySyncTests: XCTestCase {
         retry (max: 5) {
             output += "try"
             throw TestError.testError
-            }.finalCatch {_ in
-                output += "-catch"
+        }.finalCatch {_ in
+            output += "-catch"
         }
         output += "-end"
         XCTAssertEqual(output, "trytrytrytrytry-catch-end", "Didn't retry 5 times synchroniously + catch")
@@ -83,7 +92,7 @@ class RetrySyncTests: XCTestCase {
 
         retry (max: 5, retryStrategy: .delay(seconds: 2.0)) {
             if let lastTime = lastTime {
-                XCTAssertEqualWithAccuracy(StopWatch.deltaSince(t1: lastTime) , 2.0, accuracy: 0.01, "Didn't have the expected delay of 2.0")
+                XCTAssertEqualWithAccuracy(StopWatch.deltaSince(t1: lastTime) , 2.0, accuracy: 0.1, "Didn't have the expected delay of 2.0")
             }
 
             output += "try"
@@ -120,7 +129,7 @@ class RetrySyncTests: XCTestCase {
 
         retry (max: 5, retryStrategy: .custom {count, lastDelay in return (lastDelay ?? 0.0) + 0.2} ) {
             if let lastTime = lastTime {
-                XCTAssertEqualWithAccuracy(StopWatch.deltaSince(t1: lastTime) , lastDelay, accuracy: 0.01, "Didn't have the expected delay of 2.0")
+                XCTAssertEqualWithAccuracy(StopWatch.deltaSince(t1: lastTime) , lastDelay, accuracy: 0.1, "Didn't have the expected delay of 2.0")
             }
             lastDelay += 0.2
 

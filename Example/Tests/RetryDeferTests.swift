@@ -40,12 +40,11 @@ class RetryDeferTests: XCTestCase {
             output += "-defer"
             e1.fulfill()
         }
-        output += "-end"
 
         waitForExpectations(timeout: 1.0) {error in
             XCTAssertTrue(error == nil)
             XCTAssertNotNil(r)
-            XCTAssertEqual(output, "try-endtrytry-catch-defer", "Didn't invoke defer after last retry")
+            XCTAssertEqual(output, "trytrytry-catch-defer", "Didn't invoke defer after last retry")
         }
     }
 

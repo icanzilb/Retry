@@ -10,6 +10,8 @@
 		1EB76BD9EE2947BF594F91D4 /* Pods_Retry_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFDDB5BF7707B18C3C65892 /* Pods_Retry_Tests.framework */; };
 		3D150A4EFF7E936992FEDA6E /* Pods_RetryExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B169AE9B6B312A28E737506 /* Pods_RetryExample.framework */; };
 		607FACEC1AFB9204008FA782 /* RetrySyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* RetrySyncTests.swift */; };
+		9C9FB1081DABA67900014949 /* RetrySyncThreads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FB1071DABA67900014949 /* RetrySyncThreads.swift */; };
+		9C9FB10A1DABA98B00014949 /* RetryAsyncThreads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FB1091DABA98B00014949 /* RetryAsyncThreads.swift */; };
 		9CB31D2D1D6ED7090084CCC1 /* RetryDeferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB31D2C1D6ED7090084CCC1 /* RetryDeferTests.swift */; };
 		9CB31D351D6EE3610084CCC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB31D341D6EE3610084CCC1 /* AppDelegate.swift */; };
 		9CB31D371D6EE3610084CCC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB31D361D6EE3610084CCC1 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* RetrySyncTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrySyncTests.swift; sourceTree = "<group>"; };
 		76032E5A4B2E6AA7C81B2A5B /* Pods-RetryExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetryExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetryExample/Pods-RetryExample.debug.xcconfig"; sourceTree = "<group>"; };
+		9C9FB1071DABA67900014949 /* RetrySyncThreads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetrySyncThreads.swift; sourceTree = "<group>"; };
+		9C9FB1091DABA98B00014949 /* RetryAsyncThreads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryAsyncThreads.swift; sourceTree = "<group>"; };
 		9CB31D2C1D6ED7090084CCC1 /* RetryDeferTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetryDeferTests.swift; sourceTree = "<group>"; };
 		9CB31D321D6EE3610084CCC1 /* RetryExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetryExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB31D341D6EE3610084CCC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				9C9FB1071DABA67900014949 /* RetrySyncThreads.swift */,
+				9C9FB1091DABA98B00014949 /* RetryAsyncThreads.swift */,
 				607FACEB1AFB9204008FA782 /* RetrySyncTests.swift */,
 				9CD3917D1D6E5344007D7F4A /* RetryAsyncTests.swift */,
 				9CB31D2C1D6ED7090084CCC1 /* RetryDeferTests.swift */,
@@ -361,8 +367,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* RetrySyncTests.swift in Sources */,
+				9C9FB10A1DABA98B00014949 /* RetryAsyncThreads.swift in Sources */,
 				9CB31D2D1D6ED7090084CCC1 /* RetryDeferTests.swift in Sources */,
 				9CD3917E1D6E5344007D7F4A /* RetryAsyncTests.swift in Sources */,
+				9C9FB1081DABA67900014949 /* RetrySyncThreads.swift in Sources */,
 				9CD3917C1D6E5301007D7F4A /* StopWatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
