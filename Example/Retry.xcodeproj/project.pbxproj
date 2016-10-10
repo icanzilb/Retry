@@ -127,15 +127,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9CB31D331D6EE3610084CCC1 /* RetryExample */ = {
+		9C9FB1061DABA05700014949 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				9CB31D341D6EE3610084CCC1 /* AppDelegate.swift */,
-				9CB31D361D6EE3610084CCC1 /* ViewController.swift */,
 				9CB31D381D6EE3610084CCC1 /* Main.storyboard */,
 				9CB31D3B1D6EE3610084CCC1 /* Assets.xcassets */,
 				9CB31D3D1D6EE3610084CCC1 /* LaunchScreen.storyboard */,
 				9CB31D401D6EE3610084CCC1 /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		9CB31D331D6EE3610084CCC1 /* RetryExample */ = {
+			isa = PBXGroup;
+			children = (
+				9C9FB1061DABA05700014949 /* Assets */,
+				9CB31D341D6EE3610084CCC1 /* AppDelegate.swift */,
+				9CB31D361D6EE3610084CCC1 /* ViewController.swift */,
 			);
 			path = RetryExample;
 			sourceTree = "<group>";

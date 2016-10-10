@@ -68,8 +68,6 @@ The syntax for `retryAsync` is exactly the same as for `retry`. The difference i
 
 ## Installation
 
-__NB__: Before official Cocoapod release for swift 3.0, you can't use Retry via pods
-
 Retry is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -77,10 +75,24 @@ it, simply add the following line to your Podfile:
 pod "Retry"
 ```
 
+Since Retry is a swift3 library, you got to add this piece of code to your project's Podfile, to update your targets' swift language version:
+
+```
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+            config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.10'
+        end
+    end
+end
+```
+
 ## Author
 
 Marin Todorov, 2016-present
-Inspired by https://github.com/RxSwiftCommunity/RxSwiftExt
+
+Inspired by the retry operator in https://github.com/RxSwiftCommunity/RxSwiftExt
 
 ## License
 

@@ -8,6 +8,7 @@
 import UIKit
 import Retry
 
+// mock web API class that succeeds on the 4th try
 class API {
     enum WebError: Error {
         case couldnLoadData
@@ -21,6 +22,7 @@ class API {
         }
     }
 }
+
 
 class ViewController: UIViewController {
     @IBOutlet var info: UILabel!

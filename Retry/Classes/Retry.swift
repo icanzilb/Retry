@@ -36,7 +36,7 @@ open class Retry {
     }
 
     @discardableResult
-    open func finalCatch(_ handler: ((Error) -> Void)) -> Self {
+    open func finalCatch(_ handler: @escaping ((Error) -> Void)) -> Self {
         if async {
             errorHandler = handler
         } else if let lastError = lastError {
@@ -46,7 +46,7 @@ open class Retry {
     }
 
     @discardableResult
-    open func finalDefer(_ handler: (() -> Void)) -> Self {
+    open func finalDefer(_ handler: @escaping (() -> Void)) -> Self {
         if async && lastError != nil {
             deferHandler = handler
         } else {

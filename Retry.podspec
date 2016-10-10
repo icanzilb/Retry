@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Retry'
-  s.version          = '0.6.0'
+  s.version          = '0.6.1'
   s.summary          = 'Haven\'t you wished for `try` to sometimes try a little harder? Meet `retry`'
 
   s.description      = <<-DESC
