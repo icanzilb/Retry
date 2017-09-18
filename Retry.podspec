@@ -23,7 +23,7 @@ instructs them to stop retrying.
   s.source           = { :git => 'https://github.com/icanzilb/Retry.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/icanzilb'
 
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'Retry/Classes/**/*'
   
 end
