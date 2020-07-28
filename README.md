@@ -75,7 +75,7 @@ it, simply add the following line to your Podfile:
 pod "Retry"
 ```
 
-Retry is also available through Swift Package Manager. To install, add `https://github.com/g30r93g/Retry.git` to your package manifest.
+Retry is also available through Swift Package Manager. To install, add `https://github.com/icanzilb/Retry.git` to your package manifest.
 
 Since Retry is a swift3 library, you got to add this piece of code to your project's Podfile, to update your targets' swift language version:
 
