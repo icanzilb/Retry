@@ -5,6 +5,8 @@
 //  This source code is covered by the MIT license. Consult the LICENSE file.
 //
 
+import Foundation
+
 open class Retry {
 
     public enum Strategy {
