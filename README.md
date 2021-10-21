@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/Retry.svg?style=flat)](http://cocoapods.org/pods/Retry)
 [![License](https://img.shields.io/cocoapods/l/Retry.svg?style=flat)](http://cocoapods.org/pods/Retry)
 [![Platform](https://img.shields.io/cocoapods/p/Retry.svg?style=flat)](http://cocoapods.org/pods/Retry)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Example
 
@@ -68,6 +69,8 @@ The syntax for `retryAsync` is exactly the same as for `retry`. The difference i
 
 ## Installation
 
+### CocoaPods
+
 Retry is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -89,6 +92,19 @@ post_install do |installer|
     end
 end
 ```
+
+### Carthage
+
+Retry is also available through [Carthage][Carthage repo]. To install
+it, simply add the following line to your Cartfile:
+
+```
+github "icanzilb/Retry"
+```
+
+See [Carthage's readme][Carthage repo] for more information on integrating Carthage-built frameworks into your project.
+
+[Carthage repo]: https://github.com/Carthage/Carthage
 
 ## Author
 
